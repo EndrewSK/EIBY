@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/sobre.css">
+
+    <script>
+      function adjustNavMargin() {
+        const navUl = document.querySelector('nav ul');
+        const hasScrollbar = window.innerWidth > document.documentElement.clientWidth;
+    
+        // Ajusta a margem com base na presença da barra de rolagem
+        if (hasScrollbar) {
+            navUl.style.marginRight = '15px';
+        } else {
+            navUl.style.marginRight = '0';
+        }
+      }
+    
+      document.addEventListener('DOMContentLoaded', adjustNavMargin);
+      
+      window.addEventListener('resize', adjustNavMargin);
+    </script>
+    
+    <title>Sobre o Projeto</title>
+
+  </head>
+
+  <body>
+
+    <header>
+      <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/produtos">Produtos</a></li>
+            <li><a href="/zones">Zones</a></li>
+            <% if (username.role === 'admin') { %>
+                <li><a href="/produtosadm">Produtos ADM</a></li>
+                <li><a href="/zonesadm">Zones ADM</a></li>
+            <% } %>
+            <li><a href="/sobre">Sobre</a></li>
+            <li><a href="/logout">Sair</a></li>
+          </ul>
+        </nav>
+  </header>
+
+    <div class="container">
+      <div class="project-description">
+        <h2>Sobre o Projeto</h2>
+        <p>
+          O projeto "Robo Almoxarifado" é uma solução inovadora que visa transformar a gestão de almoxarifados e a logística interna com o auxílio de um robô inteligente. Este robô é projetado para otimizar o processo de coleta e movimentação de objetos em ambientes de armazenamento, trazendo eficiência e precisão para operações que tradicionalmente dependem de trabalho manual.
+        </p>
+        <h2>Objetivo</h2>
+        <p>
+          O principal objetivo do "Robo Almoxarifado" é automatizar e melhorar a eficiência das operações em almoxarifados. Com a integração de tecnologias avançadas de automação e inteligência artificial, o robô facilita a organização, o transporte e a seleção de itens, reduzindo erros humanos e acelerando o processo de movimentação de inventário.
+        </p>
+        <h2>Benefícios</h2>
+        <ul>
+          <li><strong>Aumento da Eficiência:</strong> Reduz o tempo necessário para a coleta e movimentação de objetos, aumentando a eficiência operacional do almoxarifado.</li>
+          <li><strong>Redução de Erros:</strong> Minimiza a ocorrência de erros humanos na seleção e movimentação de itens, melhorando a precisão no gerenciamento de inventário.</li>
+          <li><strong>Segurança:</strong> Alivia os trabalhadores de tarefas físicas repetitivas e potencialmente perigosas.</li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 EIBY. Todos os direitos reservados.</p>
+    </footer>
+
+  </body>
+</html>
